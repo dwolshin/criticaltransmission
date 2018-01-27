@@ -45,6 +45,7 @@ Critical Transmission/Library/
 testexe_Data/
 Critical Transmission/crit_trans_test_Data/
 *.exe
+*.log
 
 
 Critical Transmission/UnityPlayer.dll

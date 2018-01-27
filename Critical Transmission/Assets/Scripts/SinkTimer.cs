@@ -32,9 +32,20 @@ public class SinkTimer : NetworkBehaviour {
 				remainingTime -= Time.deltaTime * accelerationAmount;
 			}
 		}
+
+		if (remainingTime < 0) {
+			remainingTime = 0;
+			GameOverHandler ();
+		}
 	}
 
 	public float GetRemainingTime() {
 		return remainingTime;
+	}
+
+
+	//Can only be called by server, sends messages to players
+	void GameOverHandler() {
+
 	}
 }

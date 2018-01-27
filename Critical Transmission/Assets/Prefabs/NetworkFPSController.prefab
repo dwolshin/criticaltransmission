@@ -61,6 +61,7 @@ GameObject:
   - component: {fileID: 114790052620594226}
   - component: {fileID: 114541327810518214}
   - component: {fileID: 114424005575800006}
+  - component: {fileID: 114889294879526628}
   m_Layer: 0
   m_Name: NetworkFPSController
   m_TagString: Untagged
@@ -178,11 +179,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
+  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
-  m_StereoMirrorMode: 0
 --- !u!23 &23404768748637332
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -192,6 +193,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -207,6 +209,7 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -488,7 +491,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565763043677710}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
@@ -582,6 +585,19 @@ MonoBehaviour:
   m_FootstepSounds: []
   m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+--- !u!114 &114889294879526628
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1565763043677710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c05cf9d12e5fb54eb5d8697e12a2304, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FirstPersonCharacter: {fileID: 1906811603375024}
+  CharactersModel: []
 --- !u!124 &124343421852367554
 Behaviour:
   m_ObjectHideFlags: 1
@@ -620,7 +636,7 @@ Canvas:
   m_GameObject: {fileID: 1654274656031950}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 1
+  m_RenderMode: 0
   m_Camera: {fileID: 20332812362786810}
   m_PlaneDistance: 2
   m_PixelPerfect: 0

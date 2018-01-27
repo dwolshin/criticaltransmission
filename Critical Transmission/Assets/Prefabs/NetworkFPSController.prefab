@@ -179,11 +179,11 @@ Camera:
   m_TargetEye: 3
   m_HDR: 0
   m_AllowMSAA: 1
-  m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+  m_StereoMirrorMode: 0
 --- !u!23 &23404768748637332
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -193,7 +193,6 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -209,7 +208,6 @@ MeshRenderer:
   m_PreserveUVs: 1
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
   m_SelectedEditorRenderState: 3
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
@@ -375,7 +373,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 3}
     m_FontSize: 100
     m_FontStyle: 0
     m_BestFit: 0
@@ -400,6 +398,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sinkTimerText: {fileID: 114173346399678186}
+  saboRoleText: {fileID: 0}
+  sailorRoleText: {fileID: 0}
+  readyPanel: {fileID: 0}
+  playersConnectedText: {fileID: 0}
+  pressSpace: {fileID: 0}
+  waitingPanel: {fileID: 0}
+  waitingText: {fileID: 0}
 --- !u!114 &114424005575800006
 MonoBehaviour:
   m_ObjectHideFlags: 1

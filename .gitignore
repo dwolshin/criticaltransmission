@@ -51,3 +51,6 @@ Critical Transmission/Assets/PlayerBehaviour.cs.meta
 Critical Transmission/Critical Transmission.sln
 Critical Transmission/Critical Transmission.userprefs
 Critical Transmission/UnityPackageManager/manifest.json
+Critical Transmission/Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/Scripts.meta
+Critical Transmission/crit_trans_test_Data/
+*.exe

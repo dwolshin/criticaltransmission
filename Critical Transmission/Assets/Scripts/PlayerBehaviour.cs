@@ -5,6 +5,8 @@ using UnityEngine.Networking;
 
 public class PlayerBehaviour : NetworkBehaviour {
 
+	public enum Role {unassigned, sailor, sabo};
+
 	public static PlayerBehaviour singleton;
 
 	private const float maxInteractDistance = 1f;
@@ -13,6 +15,21 @@ public class PlayerBehaviour : NetworkBehaviour {
 
 	private GameObject fpsCamera;
 
+	private Role _role;
+
+	public Role role {
+		set {
+			if (value == null) {
+				_role = Role.unassigned;
+				return;
+			}
+			_role = value;
+			if (!isLocalPlayer) return;
+			GetComponentInChildren<UIController> ().DisplayRole (_role);
+		}
+		get {return _role; }
+	}
+
 	public override void OnStartLocalPlayer()
 	{
 		singleton = this;
@@ -20,19 +37,23 @@ public class PlayerBehaviour : NetworkBehaviour {
 		fpsCamera = transform.Find ("FirstPersonCharacter").gameObject;
 		fpsCamera.SetActive(true);
 		transform.Find("Cube").GetComponent<MeshRenderer>().material.color = Color.red;
+		role = Role.unassigned;
+
 	}
 
 	public void Update() {
 
 		if (Input.GetButtonDown("Fire1")) {
 			RaycastHit hit;
-			if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, maxInteractDistance)) {
+			//if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, maxInteractDistance)) {
 
-			}
+			//}
 		}
 
 		if (Input.GetButton("Fire1")) {
 
 		}
 	}
+
+
 }

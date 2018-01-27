@@ -42,3 +42,12 @@ ehthumbs.db
 [Tt]humbs.db
 [Dd]esktop.iniCritical Transmission/Library/ShaderCache/
 Critical Transmission/Library/metadata/
+Critical Transmission/Library/
+testexe_Data/
+*.csproj
+testexe.exe
+UnityPlayer.dll
+Critical Transmission/Assets/PlayerBehaviour.cs.meta
+Critical Transmission/Critical Transmission.sln
+Critical Transmission/Critical Transmission.userprefs
+Critical Transmission/UnityPackageManager/manifest.json

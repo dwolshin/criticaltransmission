@@ -11,7 +11,7 @@ sysinfo.txt
 /Assets/AssetStoreTools*
 *.apk
 *.unitypackage
-
+*.log
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
@@ -29,7 +29,7 @@ sysinfo.txt
 .consulo/
 /*.tmp
 /*.svd
-
+*.csproj
 # ============ #
 # OS generated #
 # ============ #
@@ -40,18 +40,14 @@ sysinfo.txt
 Icon?
 ehthumbs.db
 [Tt]humbs.db
-[Dd]esktop.iniCritical Transmission/Library/ShaderCache/
-Critical Transmission/Library/metadata/
+[Dd]esktop.ini
 Critical Transmission/Library/
 testexe_Data/
-*.csproj
-testexe.exe
-UnityPlayer.dll
-Critical Transmission/Assets/PlayerBehaviour.cs.meta
-Critical Transmission/Critical Transmission.sln
-Critical Transmission/Critical Transmission.userprefs
-Critical Transmission/UnityPackageManager/manifest.json
-Critical Transmission/Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/Scripts.meta
 Critical Transmission/crit_trans_test_Data/
 *.exe
-Critical Transmission/Assets/Standard Assets/Characters/ThirdPersonCharacter/Animation/Scripts.meta
+
+
+Critical Transmission/UnityPlayer.dll
+Critical Transmission/Critical Transmission.userprefs
+Critical Transmission/UnityPackageManager/manifest.json
+Critical Transmission/Critical Transmission.sln

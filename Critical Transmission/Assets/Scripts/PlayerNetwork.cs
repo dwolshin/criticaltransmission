@@ -10,10 +10,9 @@ public class PlayerNetwork : NetworkBehaviour {
 
 	public override void OnStartLocalPlayer ()
 	{
-
-
 		GetComponent<FirstPersonController> ().enabled = true;
 		FirstPersonCharacter.SetActive (true);
+		transform.Find ("UI").gameObject.SetActive (true);
 		//FirstPersonCharacter.GetComponent<MeshRenderer>().material.color = Color.red;
 
 		foreach (GameObject go in CharactersModel) {

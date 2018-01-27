@@ -111,8 +111,8 @@ GameObject:
   - component: {fileID: 82078447029907272}
   - component: {fileID: 114790052620594226}
   - component: {fileID: 114541327810518214}
-  - component: {fileID: 114424005575800006}
   - component: {fileID: 114631998890606688}
+  - component: {fileID: 114424005575800006}
   m_Layer: 0
   m_Name: NetworkFPSController
   m_TagString: Untagged
@@ -744,7 +744,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1565763043677710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427a5549400370a4b95af25ad83e798d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5c05cf9d12e5fb54eb5d8697e12a2304, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonCharacter: {fileID: 1906811603375024}

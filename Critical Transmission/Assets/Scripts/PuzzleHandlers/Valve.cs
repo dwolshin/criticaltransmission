@@ -1,31 +1,32 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 //Valve's pretty okay.
-public class Valve : MonoBehaviour {
+public class Valve : NetworkBehaviour {
 
 	public const float maxValue = 1;
 	public const float minValue = 0;
 	public float value = 0;
-	public float valuePerSecond;
+	public float valuePerSecond = 0.2f;
 
 	void Update() {
-		TurnValve (false);
+		TurnValve (true);
 	}
 
 	void TurnValve(bool isClockwise) {
 		if (!isClockwise) {
 			value -= valuePerSecond * Time.deltaTime;
-			if (value < minValue)
+			if (value <= minValue)
 				value = minValue;
-			transform.Rotate (new Vector3 (0, 0, -5f), Space.Self);
+			else transform.Rotate (new Vector3 (0, -2f, 0), Space.Self);
 		}
 		if (isClockwise) {
 			value += valuePerSecond * Time.deltaTime;
 			if (value > maxValue)
 				value = maxValue;
-			transform.Rotate (new Vector3 (0, 0, 5f), Space.Self);
+			else transform.Rotate (new Vector3 (0, 2f, 0), Space.Self);
 
 		}
 	}

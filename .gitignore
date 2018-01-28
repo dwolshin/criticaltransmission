@@ -2,7 +2,6 @@
 # Unity generated #
 # =============== #
 [Tt]emp/
-[Oo]bj/
 [Bb]uild
 /[Bb]uilds/
 /[Ll]ibrary/
@@ -15,7 +14,7 @@ sysinfo.txt
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
-[Ee]xported[Oo]bj/
+
 .vs/
 /*.userprefs
 /*.csproj
@@ -52,3 +51,17 @@ Critical Transmission/UnityPlayer.dll
 Critical Transmission/Critical Transmission.userprefs
 Critical Transmission/UnityPackageManager/manifest.json
 Critical Transmission/Critical Transmission.sln
+Art/Not Textured/Alarm/Alarm.mtl
+Art/Not Textured/Alarm/AlarmBaseNormal.tx
+Art/Not Textured/Alarm/AlarmBulbNormal.tx
+Art/Not Textured/Alarm/alarm.mb
+Art/Not Textured/ModularPipes/ModularPipes.mb
+Art/Not Textured/ModularPipes/PipeCorner.mtl
+Art/Not Textured/ModularPipes/PipeCornerNML.psd
+Art/Not Textured/ModularPipes/PipeCurved.mtl
+Art/Not Textured/ModularPipes/PipeCurvedNML.psd
+Art/Not Textured/ModularPipes/PipeStraight.mtl
+Art/Not Textured/ModularPipes/PipeStraightNML.psd
+Art/Not Textured/ModularPipes/PipeValve.mtl
+Art/Not Textured/ModularPipes/PipeValveNML.psd
+Art/Not Textured/Terminal/Terminal.mb

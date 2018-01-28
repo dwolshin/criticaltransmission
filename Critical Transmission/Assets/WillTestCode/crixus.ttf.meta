@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a55881c08b8d47f40b697458c297b21e
+timeCreated: 1517089266
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Crixus
+  fontNames:
+  - Crixus
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

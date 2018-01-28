@@ -646,6 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 369bd64c2a3d4b04f87c7e520f2e03dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fpsCamera: {fileID: 4259442216579968}
 --- !u!114 &114541327810518214
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -766,6 +767,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstPersonCharacter: {fileID: 1906811603375024}
   CharactersModel: []
+  panels:
+  - {fileID: 0}
 --- !u!114 &114645870876677204
 MonoBehaviour:
   m_ObjectHideFlags: 1

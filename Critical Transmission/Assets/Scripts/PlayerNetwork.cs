@@ -7,6 +7,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PlayerNetwork : NetworkBehaviour {
 	public GameObject FirstPersonCharacter;
 	public GameObject[] CharactersModel;
+	public GameObject[] panels;
 
 	public override void OnStartLocalPlayer ()
 	{

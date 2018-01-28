@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Networking;
 
 //Valve's pretty okay.
-public class Valve : NetworkBehaviour {
+public class Valve : MonoBehaviour {
 
 	public const float maxValue = 1;
 	public const float minValue = 0;

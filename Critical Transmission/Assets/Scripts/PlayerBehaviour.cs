@@ -13,7 +13,7 @@ public class PlayerBehaviour : NetworkBehaviour {
 
 	private Transform currentInteractedObject;
 
-	private GameObject fpsCamera;
+	public Transform fpsCamera;
 
 	private Role _role;
 
@@ -34,21 +34,44 @@ public class PlayerBehaviour : NetworkBehaviour {
 	{
 		singleton = this;
 		role = Role.unassigned;
-
 	}
 
 	public void Update() {
 
-		if (Input.GetButtonDown("Fire1")) {
-			RaycastHit hit;
-			//if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, maxInteractDistance)) {
+		RaycastHit hit;
+		int hitIndex;
+		if (Physics.Raycast(fpsCamera.position, fpsCamera.forward, out hit, maxInteractDistance)) {
 
-			//}
+			hitIndex = hit.collider.GetComponent<Interactable> ().index;
+			Transform root = hit.collider.GetComponent<Interactable> ().root;
+
+			//Mouseover text
+
+			//Left click
+			if (Input.GetButtonDown("Fire1")) {
+				root.SendMessage ("OnLeftClick", hitIndex);
+			}
+
+			//Left hold
+			if (Input.GetButton("Fire1")) {
+				root.SendMessage ("OnLeftClickHold", hitIndex);
+			}
+
+			//Right click
+			if (Input.GetButtonDown ("Fire2")) {
+				root.SendMessage ("OnRightClick", hitIndex);
+			}
+
+			//Right click
+			if (Input.GetButton ("Fire2")) {
+				root.SendMessage ("OnRightClickHold", hitIndex);
+			}
+
+
 		}
 
-		if (Input.GetButton("Fire1")) {
+		//Left Click down
 
-		}
 	}
 
 

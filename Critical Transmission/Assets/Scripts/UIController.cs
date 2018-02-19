@@ -28,6 +28,7 @@ public class UIController : NetworkBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (SinkTimer.s.timerRunning)
 			sinkTimerText.text = SinkTimer.s.GetRemainingTime ().ToString ("#.0");
 		else

@@ -29,6 +29,7 @@ sysinfo.txt
 /*.tmp
 /*.svd
 *.csproj
+/*.meta
 # ============ #
 # OS generated #
 # ============ #

@@ -6,20 +6,45 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class PlayerNetwork : NetworkBehaviour {
 	public GameObject FirstPersonCharacter;
-	public GameObject[] CharactersModel;
-	//public GameObject VavlePanel;
+	//public GameObject[] CharactersModel;
+	//public GameObject ValvePanel;
+	//public SyncListFloat valveValues;
+	public GameObject valvePanel;
+    public Transform valvePanelSpawn;
+	public bool spawned = false;
+
+	public void Start(){
+		
+
+	}
 
 	public override void OnStartLocalPlayer ()
 	{
 		GetComponent<FirstPersonController> ().enabled = true;
 		FirstPersonCharacter.SetActive (true);
-		transform.Find ("UI").gameObject.SetActive (true);
-		//GetComponent<MeshRenderer>().material.color = Color.blue;
-		//FirstPersonCharacter.GetComponent<MeshRenderer>().material.color = Color.red;
 
-		foreach (GameObject go in CharactersModel) {
-			go.SetActive (false);
-		}
+		//transform.Find ("UI").gameObject.SetActive (true);
+
+
+//			foreach (GameObject go in CharactersModel) {
+//				go.SetActive (false);
+//			}
+
+
+//		if (!spawned) {
+//			var panel = Instantiate (valvePanel, valvePanelSpawn.position, valvePanelSpawn.rotation);
+//			NetworkServer.SpawnObjects ();
+//			panel.SetActive (true);
+//			spawned = true;
+//		}
+
+	
+
+	}
+
+	public override void OnStartClient(){
+		
+
 
 	}
 
@@ -28,8 +53,12 @@ public class PlayerNetwork : NetworkBehaviour {
 
 		//don't execute on the server
 		if (!isLocalPlayer) {
+			
 			return;
 		}
+
+
+
 		Ray ray = FirstPersonCharacter.GetComponent<Camera>().ViewportPointToRay (new Vector3 (0.5F, 0.5F,0));
 
 		RaycastHit hit;
@@ -77,5 +106,20 @@ public class PlayerNetwork : NetworkBehaviour {
 	}
 
 
+//	[Command]
+//	public void CmdServerSetValve (int i, float value)  // When the server is told to set the valves
+//	{
+//
+//		//meters [i].value = value;
+//		valveValues [i] = value;
+//		valveCurrentValues [i] = value;
+//
+//		Debug.Log ("Server setting index  " + i + " to value:  " + valveValues [i] + " via CMD");
+//
+//
+//
+//
+//
+//	}
 
 }

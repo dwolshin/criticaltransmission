@@ -105,14 +105,13 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4073107186721634}
+  - component: {fileID: 114790052620594226}
   - component: {fileID: 143503992186658130}
   - component: {fileID: 114881316124720938}
-  - component: {fileID: 54063724284358454}
-  - component: {fileID: 82078447029907272}
-  - component: {fileID: 114790052620594226}
   - component: {fileID: 114541327810518214}
   - component: {fileID: 114889194091734170}
-  - component: {fileID: 114945368488482242}
+  - component: {fileID: 54063724284358454}
+  - component: {fileID: 82078447029907272}
   m_Layer: 0
   m_Name: NetworkFPSController
   m_TagString: Untagged
@@ -137,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1862954787729140
 GameObject:
   m_ObjectHideFlags: 1
@@ -189,7 +188,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &1968554187494242
 GameObject:
   m_ObjectHideFlags: 1
@@ -240,7 +239,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4073107186721634
 Transform:
   m_ObjectHideFlags: 1
@@ -248,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1565763043677710}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 1.43, z: 4.892}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4259442216579968}
@@ -627,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: -1768714887, guid: 870353891bb340e2b2a9c8707e7419ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TransformSyncMode: 4
+  m_TransformSyncMode: 1
   m_SendInterval: 0.1
   m_SyncRotationAxis: 7
   m_RotationSyncCompression: 0
@@ -928,39 +927,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FirstPersonCharacter: {fileID: 1906811603375024}
-  CharactersModel: []
---- !u!114 &114945368488482242
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1565763043677710}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 820dcbdf450ba284fb4952c9dae0f6ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valveTargets:
-  - 0.2
-  - 0.5
-  - 0.7
-  valveStartValues:
-  - 0.3
-  - 0.6
-  - 0.8
-  valveCurrentValues:
-  - 0
-  - 0
-  - 0
-  forgivenessAmount: 0.1
-  meters:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  valves:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  valvePanel: {fileID: 1443490144682186, guid: 00d908bcb0511764cbf6c95768b6eae6, type: 2}
+  valvePanelSpawn: {fileID: 4046114362937764, guid: 2a85dd527ff3e2144a7de9e1b6fbda22,
+    type: 2}
+  spawned: 0
 --- !u!114 &114981280909482098
 MonoBehaviour:
   m_ObjectHideFlags: 1

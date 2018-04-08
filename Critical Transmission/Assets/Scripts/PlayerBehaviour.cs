@@ -11,9 +11,9 @@ public class PlayerBehaviour : NetworkBehaviour {
 
 	private const float maxInteractDistance = 1f;
 
-	private Transform currentInteractedObject;
+	private Camera fpsCamers;
 
-	private GameObject fpsCamera;
+
 
 	private Role _role;
 
@@ -35,21 +35,21 @@ public class PlayerBehaviour : NetworkBehaviour {
 		singleton = this;
 		role = Role.unassigned;
 
+		fpsCamers = GetComponent<Camera> ();
+
 	}
 
 	public void Update() {
 
-		if (Input.GetButtonDown("Fire1")) {
-			RaycastHit hit;
-			//if (Physics.Raycast(fpsCamera.transform.position, fpsCamera.transform.forward, out hit, maxInteractDistance)) {
-
-			//}
+		//only run on the client
+		if (!isLocalPlayer) {
+			return;
 		}
 
-		if (Input.GetButton("Fire1")) {
 
-		}
-	}
+	
+	
 
 
+}
 }
